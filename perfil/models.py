@@ -23,8 +23,8 @@ class Conta(models.Model):
     apelido = models.CharField(max_length=50)
     banco = models.CharField(max_length=3, choices= banco_choices)
     tipo = models.CharField(max_length=3, choices= tipo_choices)
-    valor = models.FloatField()
-    icone = models.ImageField(upload_to='Icone')
+    valor = models.FloatField(verbose_name='Valor do deposito')
+    icone = models.ImageField(upload_to='Icone', verbose_name='Icone do banco')
     
     
     def __str__(self):
